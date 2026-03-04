@@ -32,9 +32,10 @@ pipeline {
       }
     }
 
-    stage('Archive classes') {
-    steps {
-      archiveArtifacts artifacts: 'out/**/*.class', fingerprint: true
+      stage('Archive classes') {
+      steps {
+        archiveArtifacts artifacts: 'out/**/*.class', fingerprint: true
+      }
     }
   }
 }
